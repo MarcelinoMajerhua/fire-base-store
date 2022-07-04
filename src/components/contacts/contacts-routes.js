@@ -1,9 +1,9 @@
 const {RouterExpress} = require("../../shared/router/router-express");
-const {GetContacts} = require("./services/get-contacts");
-const {CreateContacts} = require("./services/create-contacts");
-const {GetOneContact} = require("./services/get-one-contact");
-const {DeleteContact} = require("./services/delete-contact");
-const {UpdateContact} = require("./services/update-contact");
+const {GetContacts} = require("./application/get-contacts");
+const {CreateContacts} = require("./application/create-contacts");
+const {GetOneContact} = require("./application/get-one-contact");
+const {DeleteContact} = require("./application/delete-contact");
+const {UpdateContact} = require("./application/update-contact");
 
 class ContactsRoutes extends RouterExpress {
   run() {

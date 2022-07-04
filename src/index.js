@@ -1,3 +1,3 @@
 const app = require('./app')
-app.listen(4000)
-console.log(">Server is running on port 4000")
+app.listen(3000)
+console.log(">Server is running on port 3000")

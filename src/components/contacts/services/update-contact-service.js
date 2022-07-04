@@ -1,18 +1,19 @@
 const {UpdateDocumentFireBase} = require("../../../shared/firebase/update-document-fire-base");
 const {NAME_COLLECTIONS} = require("../../../constants");
+const {Contact} = require("../domain");
 
-class UpdateContact {
+class UpdateContactService {
   async run({email, firstname, lastname, phone,contactId}){
     const body = {email, firstname, lastname, phone}
-    await UpdateDocumentFireBase.run({
+    /*await UpdateDocumentFireBase.run({
       nameCollection: NAME_COLLECTIONS.CONTACTS,
       body,
       documentId: contactId
-    })
-    return body
+    })*/
+    return Contact.updateOne({_id: contactId}, body);
   }
 }
 
 module.exports = {
-  UpdateContact: new UpdateContact()
+  UpdateContactService: new UpdateContactService()
 }
